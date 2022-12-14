@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(0deg, 100%, 74%);
+  background-image: url("../images/bg-intro-desktop.png");
+  display: grid;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  place-items: center;
+}/*# sourceMappingURL=style.css.map */
