@@ -9,6 +9,36 @@ body {
   display: grid;
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
-  min-height: 100vh;
+  font-weight: 500;
   place-items: center;
+}
+
+.intro {
+  align-items: center;
+  display: flex;
+  gap: 7rem;
+  margin: 2rem;
+  max-width: 111rem;
+}
+.intro__title {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.intro__desc {
+  color: #fff;
+}
+.intro__try {
+  background-color: hsl(248deg, 32%, 49%);
+  border-radius: 1rem;
+  box-shadow: 0 9px hsla(249deg, 10%, 26%, 0.2);
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+.intro__try span {
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */

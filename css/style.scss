@@ -14,14 +14,34 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
-  min-height: 100vh;
   place-items: center;
 }
 .intro {
+  align-items: center;
+  display: flex;
+  gap: 7rem;
+  margin: 2rem;
+  max-width: 111rem;
   &__title {
     color: #fff;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.2;
   }
   &__desc {
     color: #fff;
+  }
+  &__try {
+    background-color: $blue;
+    border-radius: 1rem;
+    box-shadow: 0 9px hsla(249, 10%, 26%, 0.2);
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+    text-align: center;
+    & span {
+      font-weight: 400;
+    }
   }
 }
