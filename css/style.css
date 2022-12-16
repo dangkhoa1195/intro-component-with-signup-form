@@ -41,4 +41,20 @@ body {
 }
 .intro__try span {
   font-weight: 400;
+}
+
+#form {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 9px hsla(249deg, 10%, 26%, 0.2);
+  padding: 4rem;
+}
+#form p {
+  color: hsl(246deg, 25%, 77%);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+#form .text-highlight {
+  color: hsl(0deg, 100%, 74%);
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */

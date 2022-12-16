@@ -45,3 +45,18 @@ body {
     }
   }
 }
+#form {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 9px hsla(249, 10%, 26%, 0.2);
+  padding: 4rem;
+  & p {
+    color: $grayish-blue;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  & .text-highlight {
+    color: $red;
+    font-weight: 600;
+  }
+}
