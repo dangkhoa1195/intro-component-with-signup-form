@@ -33,7 +33,7 @@ body {
 .intro__try {
   background-color: hsl(248deg, 32%, 49%);
   border-radius: 1rem;
-  box-shadow: 0 9px hsla(249deg, 10%, 26%, 0.2);
+  box-shadow: 0 6px hsla(249deg, 10%, 26%, 0.2);
   color: #fff;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -47,10 +47,10 @@ body {
 #form {
   background-color: #fff;
   border-radius: 1rem;
-  box-shadow: 0 9px hsla(249deg, 10%, 26%, 0.2);
+  box-shadow: 0 6px hsla(249deg, 10%, 26%, 0.2);
   padding: 4rem;
 }
-#form p {
+#form .agree {
   color: hsl(246deg, 25%, 77%);
   font-size: 1.2rem;
   font-weight: 400;
@@ -77,4 +77,14 @@ body {
 .btn:hover {
   background-color: hsla(154deg, 59%, 51%, 0.5);
   cursor: pointer;
+}
+
+.input-control {
+  min-width: 100%;
+}
+
+.error {
+  color: hsl(0deg, 100%, 74%);
+  text-align: right;
+  font-style: italic;
 }/*# sourceMappingURL=style.css.map */

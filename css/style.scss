@@ -35,7 +35,7 @@ body {
   &__try {
     background-color: $blue;
     border-radius: 1rem;
-    box-shadow: 0 9px hsla(249, 10%, 26%, 0.2);
+    box-shadow: 0 6px hsla(249, 10%, 26%, 0.2);
     color: #fff;
     font-weight: 600;
     margin-bottom: 2rem;
@@ -49,9 +49,9 @@ body {
 #form {
   background-color: #fff;
   border-radius: 1rem;
-  box-shadow: 0 9px hsla(249, 10%, 26%, 0.2);
+  box-shadow: 0 6px hsla(249, 10%, 26%, 0.2);
   padding: 4rem;
-  & p {
+  & .agree {
     color: $grayish-blue;
     font-size: 1.2rem;
     font-weight: 400;
@@ -78,4 +78,13 @@ body {
     background-color: hsla(154, 59%, 51%, 0.5);
     cursor: pointer;
   }
+}
+.input-control {
+  min-width: 100%;
+}
+.error {
+  color: $red;
+  text-align: right;
+  font-style: italic;
+  // visibility: hidden;
 }
