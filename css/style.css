@@ -20,6 +20,9 @@ body {
   margin: 2rem;
   max-width: 111rem;
 }
+.intro__content, .intro__form {
+  flex: 1;
+}
 .intro__title {
   color: #fff;
   font-size: 5rem;
@@ -80,11 +83,17 @@ body {
 }
 
 .input-control {
+  outline: none;
+  border-radius: 1rem;
   min-width: 100%;
+  padding: 2rem 2.5rem;
 }
 
 .error {
   color: hsl(0deg, 100%, 74%);
-  text-align: right;
+  font-size: 1rem;
   font-style: italic;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */

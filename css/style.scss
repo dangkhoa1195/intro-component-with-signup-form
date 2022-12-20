@@ -22,6 +22,10 @@ body {
   gap: 7rem;
   margin: 2rem;
   max-width: 111rem;
+  &__content,
+  &__form {
+    flex: 1;
+  }
   &__title {
     color: #fff;
     font-size: 5rem;
@@ -50,6 +54,7 @@ body {
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 6px hsla(249, 10%, 26%, 0.2);
+  // min-width: 54rem;
   padding: 4rem;
   & .agree {
     color: $grayish-blue;
@@ -80,11 +85,17 @@ body {
   }
 }
 .input-control {
+  outline: none;
+  border-radius: 1rem;
   min-width: 100%;
+  padding: 2rem 2.5rem;
 }
 .error {
   color: $red;
-  text-align: right;
+  font-size: 1rem;
   font-style: italic;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: right;
   // visibility: hidden;
 }
