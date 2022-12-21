@@ -16,9 +16,15 @@ body {
 .intro {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   gap: 7rem;
   margin: 2rem;
   max-width: 111rem;
+}
+@media screen and (max-width: 800px) {
+  .intro {
+    flex-direction: column;
+  }
 }
 .intro__content, .intro__form {
   flex: 1;
@@ -30,8 +36,20 @@ body {
   line-height: 1.2;
   margin-bottom: 3rem;
 }
+@media screen and (max-width: 800px) {
+  .intro__title {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
 .intro__desc {
   color: #fff;
+}
+@media screen and (max-width: 800px) {
+  .intro__desc {
+    text-align: center;
+    font-weight: 400;
+  }
 }
 .intro__try {
   background-color: hsl(248deg, 32%, 49%);
@@ -42,6 +60,12 @@ body {
   margin-bottom: 2rem;
   padding: 2rem 0;
   text-align: center;
+  word-break: break-all;
+}
+@media screen and (max-width: 800px) {
+  .intro__try {
+    padding: 2rem 6rem;
+  }
 }
 .intro__try span {
   font-weight: 400;
@@ -52,6 +76,11 @@ body {
   border-radius: 1rem;
   box-shadow: 0 6px hsla(249deg, 10%, 26%, 0.2);
   padding: 4rem;
+}
+@media screen and (max-width: 800px) {
+  #form {
+    padding: 2.5rem;
+  }
 }
 #form .agree {
   color: hsl(246deg, 25%, 77%);
@@ -70,7 +99,7 @@ body {
   border-radius: 1rem;
   box-shadow: 0 3px hsla(154deg, 59%, 51%, 0.7);
   color: #fff;
-  margin: 2rem 0;
+  margin-bottom: 1.5rem;
   min-width: 100%;
   padding: 2rem 0;
   text-align: center;
@@ -82,18 +111,34 @@ body {
   cursor: pointer;
 }
 
-.input-control {
-  outline: none;
+#form input {
+  border: 1px solid hsl(249deg, 10%, 26%);
   border-radius: 1rem;
   min-width: 100%;
   padding: 2rem 2.5rem;
+  outline: none;
+}
+#form input:active, #form input:focus {
+  border: 1px solid hsl(246deg, 25%, 77%);
 }
 
 .error {
   color: hsl(0deg, 100%, 74%);
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-style: italic;
   margin-top: 0.5rem;
   margin-bottom: 2rem;
   text-align: right;
+  visibility: hidden;
+}
+
+.input-control {
+  position: relative;
+}
+
+.erorr-icon {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  visibility: hidden;
 }/*# sourceMappingURL=style.css.map */

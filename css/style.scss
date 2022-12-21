@@ -4,6 +4,11 @@ $green: hsl(154, 59%, 51%);
 $blue: hsl(248, 32%, 49%);
 $dark-blue: hsl(249, 10%, 26%);
 $grayish-blue: hsl(246, 25%, 77%);
+@mixin max-width {
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}
 html {
   font-size: 62.5%;
 }
@@ -19,9 +24,13 @@ body {
 .intro {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   gap: 7rem;
   margin: 2rem;
   max-width: 111rem;
+  @include max-width() {
+    flex-direction: column;
+  }
   &__content,
   &__form {
     flex: 1;
@@ -32,9 +41,17 @@ body {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 3rem;
+    @include max-width() {
+      font-size: 3rem;
+      text-align: center;
+    }
   }
   &__desc {
     color: #fff;
+    @include max-width() {
+      text-align: center;
+      font-weight: 400;
+    }
   }
   &__try {
     background-color: $blue;
@@ -45,6 +62,10 @@ body {
     margin-bottom: 2rem;
     padding: 2rem 0;
     text-align: center;
+    word-break: break-all;
+    @include max-width() {
+      padding: 2rem 6rem;
+    }
     & span {
       font-weight: 400;
     }
@@ -54,8 +75,10 @@ body {
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 6px hsla(249, 10%, 26%, 0.2);
-  // min-width: 54rem;
   padding: 4rem;
+  @include max-width() {
+    padding: 2.5rem;
+  }
   & .agree {
     color: $grayish-blue;
     font-size: 1.2rem;
@@ -73,7 +96,7 @@ body {
   border-radius: 1rem;
   box-shadow: 0 3px hsla(154, 59%, 51%, 0.7);
   color: #fff;
-  margin: 2rem 0;
+  margin-bottom: 1.5rem;
   min-width: 100%;
   padding: 2rem 0;
   text-align: center;
@@ -84,18 +107,33 @@ body {
     cursor: pointer;
   }
 }
-.input-control {
-  outline: none;
+#form input {
+  border: 1px solid $dark-blue;
   border-radius: 1rem;
   min-width: 100%;
   padding: 2rem 2.5rem;
+  outline: none;
+
+  &:active,
+  &:focus {
+    border: 1px solid $grayish-blue;
+  }
 }
 .error {
   color: $red;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-style: italic;
   margin-top: 0.5rem;
   margin-bottom: 2rem;
   text-align: right;
-  // visibility: hidden;
+  visibility: hidden;
+}
+.input-control {
+  position: relative;
+}
+.erorr-icon {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  visibility: hidden;
 }
