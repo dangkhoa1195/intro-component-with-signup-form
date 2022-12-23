@@ -108,7 +108,7 @@ body {
   }
 }
 #form input {
-  border: 1px solid $dark-blue;
+  border: 2px solid $dark-blue;
   border-radius: 1rem;
   min-width: 100%;
   padding: 2rem 2.5rem;
@@ -116,10 +116,13 @@ body {
 
   &:active,
   &:focus {
-    border: 1px solid $grayish-blue;
+    border: 2px solid $grayish-blue;
+  }
+  &.error {
+    border: 2px solid $red;
   }
 }
-.error {
+p.error {
   color: $red;
   font-size: 1.2rem;
   font-style: italic;
@@ -131,9 +134,12 @@ body {
 .input-control {
   position: relative;
 }
-.erorr-icon {
+.error-icon {
   position: absolute;
   top: 2rem;
   right: 2.5rem;
   visibility: hidden;
+}
+.error-placeholder-email::-webkit-input-placeholder {
+  color: $red;
 }
